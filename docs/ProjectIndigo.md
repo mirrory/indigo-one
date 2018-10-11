@@ -19,7 +19,7 @@ UI
 Git:
 https://github.com/mirrory/indigo
 
-Focus: 
+Focus:
 Usability
 Fun Factor
 Depth
@@ -101,7 +101,7 @@ World - Culture & Art
 	Art
 	Create Art Forms
 Health - Health & Fitness
-	Health 
+	Health
 	Fitness
 	Create Diseases
 Thought - Philosophy
@@ -121,57 +121,10 @@ New Objects should have a Name and other properties set at create time
 Saving 3D models - in gltf. But where??
 Editing models - A-Frame inspector
 
-Entities:
-Universe(id,name,collaborators,last_edit_date,create_date)
-Game(id,name,universe_id,collaborators,last_edit_date,create_date)
--- all the following have universe_id --
-Planet(id,name,radius,atmosphere,location,color,axial_tilt)
-Star(id,name,location,radius,color,stage,tempc)
-Asteroid(id,name,location,size,color)
-PhysicsVar(id,variable,value,tool_id)
-ChemicalElement(id,name,atomic_number)
-ChemicalCompound(id,name,elements)
-(specific)Organism(id,name,type,size,location)
-Plant(id,name,type,size,color,location)
-Animal(id,name,type,size,color,location,happiness,dob,health,is_pet)
-Human(id,name,height,weight,race,citizenship,location,happiness,dob,health,status,job,political_party)
--- planet id --
-Biome(id,name,tempc_range)
-Continent(id,name,location)
-Country(id,name,location,gdp,population,continent_id,economic_system)
-Settlement(id,name,location,population,continent_id,country_id)
-Landform(id,name,type,continent_id,country_id)
-LiquidBody(id,name,type,continent_id,country_id,chemical_makeup)
-Timepoint(id,type,time_happened)
-Activity(id,name,health_factor,fun_factor)
-CultureFacet(id,name)
-ArtForm(id,name,type,is_performance,is_visual)
-Disease(id,name,affects_plants,affects_animals,affects_people,symptoms,survival_rate)
-Philosophy(id,name)
-ReferenceWork(id,name,type)
-PoliticalParty(id,name,originators)
-Law(id,name,type,rule)
-EconomicSystem(id,name,originators)
-Technology(id,name,type,inventors)
-Building(id,name,height,width,color,location,type,owned_by,built_by)
-Tool(id,name,type,acts_on,exp) -- exp for expression
--- games --
-Character(human_id,power,stat)
-Event(type)
-Audio(file)
-Animation(file)
-Dialogue(dialogue,character_id)
-Item(name)
-Component(name)
-Option(pov)
-Object(id,name)
-Mechanic(id,exp)
-Enemy(id,name)
-
 Game Options:
 Characters
 	People can become Characters (who)
-Story	
+Story
 	Script + Timeline + Events
 Timeline
 	(when)
@@ -246,7 +199,7 @@ Sidebar - Title = Project Indigo, icons, and nav.
 Icons - Create mode, Game mode, Account edit mode - opens modal
 Nav = sections and entities under each - GET
 Account edit - Includes username, log out, log in
-Include - About, Terms, Copyright, Privacy, GPDR, credits, A-Frame link, things used, Documentation 
+Include - About, Terms, Copyright, Privacy, GPDR, credits, A-Frame link, things used, Documentation
 Search bar drops down from the top - search by create date, edit date, collaborators, genre - also, suggestions. Search public universes
 HTTPS
 XSS protection
@@ -262,7 +215,7 @@ SQL injection checks
 License:
 Should be open sourced
 
-Hosting: 
+Hosting:
 When Alpha is ready
 Front-end only can be hosted sooner
 
