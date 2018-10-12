@@ -10,17 +10,15 @@ var io = require('socket.io')(http);
 //Body parser, cookie parser and session go here
 
 var app = express();
-// May not use if just serving API
-app.set('view engine', 'pug');
 
 /* HTML here */
 app.use(express.static('public'));
 
 /* Use for API only */
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Project Indigo', message: 'Project Indigo' });
+  res.send(200);
 });
 
-app.listen(80, function () {
-  console.log('Project Indigo is running on port 80.');
+app.listen(3032, function () {
+  console.log('Project Indigo is running on port 3032.');
 });

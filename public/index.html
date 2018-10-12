@@ -23,6 +23,29 @@
         entityEl.setAttribute('color', '#00ff00');
         sceneEl.appendChild(entityEl);
       }
+
+      function showOptions(category){
+        subcats = document.getElementById(category);
+        if(subcats.clientHeight){
+          subcats.style.height = 0;
+        }
+        else{
+          subcats.style.height = subcats.scrollHeight + "px";
+        }
+      }
+
+      function showEntities(entityType){
+        entities = document.getElementById('entities');
+        nav = document.getElementById('nav');
+        if(entities.clientWidth){
+          entities.style.width = 0;
+          nav.style.width = nav.scrollWidth + "px";
+        }
+        else{
+          entities.style.width = entities.scrollWidth + "px";
+          nav.style.width = 0;
+        }
+      }
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
     <link rel="stylesheet" href="styles.css">
@@ -31,9 +54,99 @@
     <div id="nav">
       Project Indigo
       <br />
-      Tools
+      <span id="toolsCategory">Tools</span>
+      <div id="tools" class="subcategories"></div>
       <br />
-      Universe
+      <span id="universeCategory" onclick="showOptions('universe')">Universe</span>
+      <div id="universe" class="subcategories">
+        <span>Planets <span onclick="makeNewPlanet()">+</span></span>
+        <br />
+        <span>Stars</span>
+        <br />
+        <span>Asteroids</span>
+        <br />
+        <span>Physics</span>
+        <br />
+        <span>Chemicals</span>
+        <br />
+        <span>Organisms</span>
+        <br />
+        <span>Plants</span>
+        <br />
+        <span>Animals <span onclick="showEntities('animals')">></span></span>
+        <br />
+        <span>Humans</span>
+      </div>
+      <br />
+      <span id="locationsCategory" onclick="showOptions('locations')">Locations</span>
+      <div id="locations">
+        <span>Biomes</span>
+        <br />
+        <span>Continents</span>
+        <br />
+        <span>Countries</span>
+        <br />
+        <span>Settlements</span>
+        <br />
+        <span>Landforms</span>
+        <br />
+        <span>Liquid Bodies</span>
+      </div>
+      <br />
+      <span id="timeCategory" onclick="showOptions('time')">Time</span>
+      <div id="time">
+        <span>Events</span>
+      </div>
+      <br />
+      <span id="activityCategory" onclick="showOptions('activity')">Activities</span>
+      <div id="activity">
+        <span>Activities</span>
+      </div>
+      <br />
+      <span id="worldCategory" onclick="showOptions('world')">World</span>
+      <div id="world">
+        <span>Culture Facets</span>
+        <br />
+        <span>Art Forms</span>
+      </div>
+      <br />
+      <span id="healthCategory" onclick="showOptions('health')">Health</span>
+      <div id="health">
+        <span>Diseases</span>
+      </div>
+      <br />
+      <span id="thoughtCategory" onclick="showOptions('thought')">Thought</span>
+      <div id="thought">
+        <span>Philosophies</span>
+      </div>
+      <br />
+      <span id="libraryCategory" onclick="showOptions('library')">Library</span>
+      <div id="library">
+        <span>Reference Works</span>
+      </div>
+      <br />
+      <span id="societyCategory" onclick="showOptions('society')">Society</span>
+      <div id="society">
+        <span>Political Parties</span>
+        <br />
+        <span>Laws</span>
+        <br />
+        <span>Economic Systems</span>
+      </div>
+      <br />
+      <span id="technologyCategory" onclick="showOptions('technology')">Technologies</span>
+      <div id="technology">
+        <span>Technologies</span>
+        <br />
+        <span>Buildings</span>
+      </div>
+    </div>
+    <div id="entities">
+      <span>Joe</span>
+      <br />
+      <span>Karen</span>
+      <br />
+      <span>Bob</span>
     </div>
     <div id="viewer">
       <a-scene onclick="makeNewPlanet()" embedded>
